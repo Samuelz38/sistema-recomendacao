@@ -6,114 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
-    <height>655</height>
+    <width>457</width>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QWidget" name="widget" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>1677</width>
-       <height>1677</height>
-      </size>
-     </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #212121; 
+border-radius: 10px;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QFrame" name="main_frame">
      <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <widget class="QLabel" name="imagem_label">
-      <property name="geometry">
-       <rect>
-        <x>-40</x>
-        <y>60</y>
-        <width>581</width>
-        <height>291</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>311</width>
-        <height>291</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>1677</width>
-        <height>1677</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-border: 5px solid black; /* Define a espessura, estilo e cor da borda */
-border-radius: 10px; /* Define o raio dos cantos em pixels */
-</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../assets/57412022-real-gamer-um-controlador-de-videogame-nas-mãos-do-homem-na-noite.jpg</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="Nome_Jogo_label">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>162</width>
-        <height>43</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>5</width>
-        <height>5</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>5</width>
-        <height>5</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;TítuloJogo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </widget>
-   </item>
-   <item>
-    <widget class="QFrame" name="categoria_frame">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+      <string notr="true">background-color: #212121; 
+border-radius: 10px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::Shape::StyledPanel</enum>
@@ -123,78 +32,86 @@ border-radius: 10px; /* Define o raio dos cantos em pixels */
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="1" column="0">
-       <widget class="QTableWidget" name="tableWidget">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">element {
-  border: 2px solid black; /* Define a espessura, estilo e cor da borda */
-  border-radius: 10px; /* Define o raio dos cantos em pixels */
-}</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="especificacoes_label">
-        <property name="text">
-         <string>Especificações</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Policy::Maximum</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
-    <widget class="QFrame" name="texto_resumo_frame">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="1" column="0">
-       <widget class="QTextBrowser" name="textBrowser">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="resumo_label">
-        <property name="text">
-         <string>Resumo</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="titulo_label">
+            <property name="styleSheet">
+             <string notr="true">font-size: 24pt; 
+font-weight: 700; 
+color: #ECECEC;</string>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Título do Jogo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="imagem_label">
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../assets/review.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="resumo_label">
+            <property name="styleSheet">
+             <string notr="true">font-weight: 700; 
+color: #ECECEC;</string>
+            </property>
+            <property name="text">
+             <string>Resumo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="resumo_textBrowser">
+            <property name="styleSheet">
+             <string notr="true">background-color: #2f2f2f;
+border-radius: 10px;
+font-weight: 700; 
+color: #ECECEC;
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="categoria_label">
+            <property name="styleSheet">
+             <string notr="true">font-weight: 700; 
+color: #ECECEC;</string>
+            </property>
+            <property name="text">
+             <string>Categorias</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="categoria_listWidget">
+          <property name="styleSheet">
+           <string notr="true">background-color: #2F2F2F; 
+border-radius: 10px;
+
+                </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
