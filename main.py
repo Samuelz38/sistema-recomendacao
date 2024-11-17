@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
 from PySide6.QtGui import QIcon
-from view.descricao import Ui_Form
+from view.novo_descricao import Ui_Form
 from view.mainwindow import Ui_MainWindow
 from view.pagina_pesquisa import Ui_PesquisaPagina
 from PySide6.QtCore import Qt

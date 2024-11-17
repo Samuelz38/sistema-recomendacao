@@ -94,5 +94,6 @@ class Ui_PesquisaPagina(object):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.voltar_pushButton.setText(QCoreApplication.translate("Form", u"Voltar", None))
         self.jogos_achados_label.setText(QCoreApplication.translate("Form", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:700;\">Jogos Achados...</span></p></body></html>", None))
+        self.lista_listWidget.addItem('TESTE01')
     # retranslateUi
 
