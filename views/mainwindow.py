@@ -15,6 +15,8 @@ from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
                                QPushButton, QSizePolicy, QSpacerItem, 
                                QVBoxLayout,QWidget)
 
+import os
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -68,7 +70,9 @@ class Ui_MainWindow(object):
         
         self.imagem_label = QLabel(self.frame)
         self.imagem_label.setObjectName(u"imagem_label")
-        self.imagem_label.setPixmap(QPixmap("view/assets/icons8-controle-64.png"))
+        self.imagem_label.setPixmap(QPixmap(os.path.join(os.path.dirname(__file__), 
+                                                         "assets", 
+                                                         "icons8-controle-64.png")))
         self.imagem_label.setScaledContents(False)
         self.imagem_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
