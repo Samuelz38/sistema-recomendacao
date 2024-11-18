@@ -19,6 +19,8 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
     QListWidget, QListWidgetItem, QSizePolicy, QTextBrowser,
     QVBoxLayout, QWidget)
 
+import os
+
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
@@ -51,7 +53,11 @@ class Ui_Form(object):
         self.imagem_label = QLabel(self.main_frame)
         self.imagem_label.setObjectName(u"imagem_label")
         self.imagem_label.setStyleSheet(u"border-radius: 10px;")
-        self.imagem_label.setPixmap(QPixmap("view/assets/review.png"))
+
+        self.imagem_label.setPixmap(QPixmap(os.path.join(os.path.dirname(__file__), 
+                                                         "assets", 
+                                                         "review.png")).scaled(300, 300))
+
         self.imagem_label.setScaledContents(False)
         self.imagem_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
