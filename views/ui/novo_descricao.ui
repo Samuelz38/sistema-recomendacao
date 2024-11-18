@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #212121; 
+border-radius: 10px;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="titulo_label">
+          <property name="styleSheet">
+           <string notr="true">font-size: 24pt; 
+font-weight: 700; 
+color: #ECECEC;</string>
+          </property>
+          <property name="text">
+           <string>Título do Jogo</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="imagem_label">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../assets/review.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="resumo_label">
+            <property name="styleSheet">
+             <string notr="true">font-weight: 700; 
+color: #ECECEC;</string>
+            </property>
+            <property name="text">
+             <string>Resumo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="resumo_textBrowser">
+            <property name="styleSheet">
+             <string notr="true">background-color: #2f2f2f;
+border-radius: 10px;
+font-weight: 700; 
+color: #ECECEC;
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="main_tabWidget">
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTabWidget::pane {
+    background-color: #2f2f2f; /* Cor de fundo do painel */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 5px; /* Espaçamento interno */
+}
+
+QTabBar::tab {
+    background-color: #2f2f2f; /* Cor de fundo padrão da aba */
+    color: #ECECEC; /* Cor do texto */
+    font-weight: 700; /* Texto em negrito */
+    padding: 10px 20px; /* Espaçamento interno (horizontal e vertical) */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 3px; /* Espaçamento entre abas */
+}
+
+QTabBar::tab:selected {
+    background-color: #414141; /* Cor da aba selecionada */
+    font-weight: 700; /* Negrito extra para destacar */
+    color: #FFFFFF; /* Cor do texto mais clara */
+}
+
+QTabBar::tab:hover {
+    background-color: #3a3a3a; /* Cor ao passar o mouse sobre a aba */
+    color: #F0F0F0; /* Cor do texto ao passar o mouse */
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="genero_tab_widget">
+           <attribute name="title">
+            <string>Gênero</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="genero_listWidget"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="especificacao_tab_qwidget">
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <attribute name="title">
+            <string>Especificações</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="especificacao_listWidget">
+              <property name="cursor" stdset="0">
+               <cursorShape>ArrowCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="nota_tab_qwidget">
+           <attribute name="title">
+            <string>Nota</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="nota_listWidget"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
