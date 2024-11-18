@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
-from PySide6.QtGui import QIcon
+from PySide6.QtGui import QIcon, QPixmap
 from PySide6.QtCore import Qt
 
 from views.novo_descricao import Ui_Form
@@ -10,6 +10,7 @@ from controllers.main_controller import MainController
 from controllers.item_description_controller import ItemDescriptionController
 
 from utils.text_translator import translateText
+from utils.filepath_getter import getFilepathFromURL
 
 import sys
 
@@ -63,6 +64,9 @@ class PaginaPesquisa(QWidget, Ui_PesquisaPagina):
           self.pagina_desscricao.titulo_label.setText(context_game.name)
           self.pagina_desscricao.resumo_textBrowser.setText(translateText(context_game.description, "en", "pt"))
           self.pagina_desscricao.genero_listWidget.addItems(list(map(lambda x: translateText(x, "en", "pt"), context_game.genres)))
+          self.pagina_desscricao.imagem_label.setPixmap(QPixmap(getFilepathFromURL(context_game.image_url,
+                                                                                    context_game.name)).scaled(300, 300))
+
           self.pagina_desscricao.nota_listWidget.addItem(str(context_game.rating).replace('.', ','))
 
           self.pagina_desscricao.especificacao_listWidget.addItem(f"Data de Lançamento: {context_game.released_date}")
