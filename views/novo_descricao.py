@@ -44,17 +44,17 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addWidget(self.titulo_label)
 
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
         self.imagem_label = QLabel(self.frame)
         self.imagem_label.setObjectName(u"imagem_label")
         self.imagem_label.setStyleSheet(u"border-radius: 10px;")
-        self.imagem_label.setPixmap(QPixmap(u"../../GitHub/sistema-recoemendacao/view/assets/review.png"))
+        self.imagem_label.setPixmap(QPixmap(u"../assets/review.png"))
         self.imagem_label.setScaledContents(False)
         self.imagem_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_2.addWidget(self.imagem_label)
+        self.verticalLayout.addWidget(self.imagem_label)
 
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setObjectName(u"verticalLayout")
         self.resumo_label = QLabel(self.frame)
         self.resumo_label.setObjectName(u"resumo_label")
         self.resumo_label.setStyleSheet(u"font-weight: 700; \n"
@@ -110,6 +110,9 @@ class Ui_Form(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.genero_listWidget = QListWidget(self.genero_tab_widget)
         self.genero_listWidget.setObjectName(u"genero_listWidget")
+        self.genero_listWidget.setStyleSheet(u"border-radius: 10px;\n"
+"font-weight: 700; \n"
+"color: #ECECEC;")
 
         self.gridLayout_3.addWidget(self.genero_listWidget, 0, 0, 1, 1)
 
@@ -122,7 +125,9 @@ class Ui_Form(object):
         self.especificacao_listWidget = QListWidget(self.especificacao_tab_qwidget)
         self.especificacao_listWidget.setObjectName(u"especificacao_listWidget")
         self.especificacao_listWidget.viewport().setProperty(u"cursor", QCursor(Qt.CursorShape.ArrowCursor))
-        self.especificacao_listWidget.setStyleSheet(u"")
+        self.especificacao_listWidget.setStyleSheet(u"border-radius: 10px;\n"
+"font-weight: 700; \n"
+"color: #ECECEC;")
 
         self.gridLayout_2.addWidget(self.especificacao_listWidget, 0, 0, 1, 1)
 
@@ -133,6 +138,9 @@ class Ui_Form(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.nota_listWidget = QListWidget(self.nota_tab_qwidget)
         self.nota_listWidget.setObjectName(u"nota_listWidget")
+        self.nota_listWidget.setStyleSheet(u"border-radius: 10px;\n"
+"font-weight: 700; \n"
+"color: #ECECEC;")
 
         self.gridLayout.addWidget(self.nota_listWidget, 0, 0, 1, 1)
 
@@ -149,7 +157,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.main_tabWidget.setCurrentIndex(2)
+        self.main_tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Form)

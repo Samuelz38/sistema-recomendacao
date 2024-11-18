@@ -42,26 +42,26 @@ color: #ECECEC;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="imagem_label">
-          <property name="styleSheet">
-           <string notr="true">border-radius: 10px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../assets/review.png</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>false</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
          <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="imagem_label">
+            <property name="styleSheet">
+             <string notr="true">border-radius: 10px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../assets/review.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QLabel" name="resumo_label">
             <property name="styleSheet">
@@ -120,7 +120,7 @@ QTabBar::tab:hover {
 </string>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="genero_tab_widget">
            <attribute name="title">
@@ -128,7 +128,13 @@ QTabBar::tab:hover {
            </attribute>
            <layout class="QGridLayout" name="gridLayout_3">
             <item row="0" column="0">
-             <widget class="QListWidget" name="genero_listWidget"/>
+             <widget class="QListWidget" name="genero_listWidget">
+              <property name="styleSheet">
+               <string notr="true">border-radius: 10px;
+font-weight: 700; 
+color: #ECECEC;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -146,7 +152,9 @@ QTabBar::tab:hover {
                <cursorShape>ArrowCursor</cursorShape>
               </property>
               <property name="styleSheet">
-               <string notr="true"/>
+               <string notr="true">border-radius: 10px;
+font-weight: 700; 
+color: #ECECEC;</string>
               </property>
              </widget>
             </item>
@@ -158,7 +166,13 @@ QTabBar::tab:hover {
            </attribute>
            <layout class="QGridLayout" name="gridLayout">
             <item row="0" column="0">
-             <widget class="QListWidget" name="nota_listWidget"/>
+             <widget class="QListWidget" name="nota_listWidget">
+              <property name="styleSheet">
+               <string notr="true">border-radius: 10px;
+font-weight: 700; 
+color: #ECECEC;</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>

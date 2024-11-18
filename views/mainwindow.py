@@ -8,33 +8,29 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import QCoreApplication, QMetaObject, Qt
-from PySide6.QtGui import QPixmap
-from PySide6.QtWidgets import (QComboBox, QFrame, QGridLayout,
-                               QHBoxLayout, QLabel, QLineEdit,
-                               QPushButton, QSizePolicy, QSpacerItem, 
-                               QVBoxLayout,QWidget)
-
-import os
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QPushButton,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
-            
             MainWindow.setObjectName(u"MainWindow")
-
         MainWindow.resize(800, 600)
         MainWindow.setStyleSheet(u"background-color: #1a1a1a;")
-
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-
         self.gridLayout_3 = QGridLayout(self.centralwidget)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-
         self.inicial_line = QFrame(self.centralwidget)
         self.inicial_line.setObjectName(u"inicial_line")
         self.inicial_line.setStyleSheet(u"line {\n"
@@ -64,113 +60,8 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
-
         self.gridLayout_2 = QGridLayout(self.frame)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        
-        self.imagem_label = QLabel(self.frame)
-        self.imagem_label.setObjectName(u"imagem_label")
-        self.imagem_label.setPixmap(QPixmap(os.path.join(os.path.dirname(__file__), 
-                                                         "assets", 
-                                                         "icons8-controle-64.png")))
-        self.imagem_label.setScaledContents(False)
-        self.imagem_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.imagem_label, 2, 0, 1, 1)
-
-        self.imagem_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_2.addItem(self.imagem_verticalSpacer, 0, 0, 1, 1)
-
-        self.filtro_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_2.addItem(self.filtro_verticalSpacer, 8, 0, 1, 1)
-
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.esquerda_filtro_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_2.addItem(self.esquerda_filtro_horizontalSpacer)
-
-        self.genero_comboBox = QComboBox(self.frame)
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.addItem("")
-        self.genero_comboBox.setObjectName(u"genero_comboBox")
-        self.genero_comboBox.setStyleSheet(u" QComboBox {\n"
-"                padding: 8px;\n"
-"                background-color: #3d3d3d;\n"
-"                border: 1px solid #4d4d4d;\n"
-"                border-radius: 5px;\n"
-"                color: white;\n"
-"            }\n"
-"            QComboBox:drop-down {\n"
-"                border: none;\n"
-"            }\n"
-"            QComboBox:down-arrow {\n"
-"                image: none;\n"
-"                border: none;\n"
-"            }\n"
-"            QComboBox QAbstractItemView {\n"
-"                background-color: #3d3d3d;\n"
-"                color: white;\n"
-"                selection-background-color: #10a37f;\n"
-"            }")
-
-        self.horizontalLayout_2.addWidget(self.genero_comboBox)
-
-        self.centro_filtro_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_2.addItem(self.centro_filtro_horizontalSpacer)
-
-        self.categoria_comboBox = QComboBox(self.frame)
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.addItem("")
-        self.categoria_comboBox.setObjectName(u"categoria_comboBox")
-        self.categoria_comboBox.setStyleSheet(u" QComboBox {\n"
-"                padding: 8px;\n"
-"                background-color: #3d3d3d;\n"
-"                border: 1px solid #4d4d4d;\n"
-"                border-radius: 5px;\n"
-"                color: white;\n"
-"            }\n"
-"            QComboBox:drop-down {\n"
-"                border: none;\n"
-"            }\n"
-"            QComboBox:down-arrow {\n"
-"                image: none;\n"
-"                border: none;\n"
-"            }\n"
-"            QComboBox QAbstractItemView {\n"
-"                background-color: #3d3d3d;\n"
-"                color: white;\n"
-"                selection-background-color: #10a37f;\n"
-"            }")
-
-        self.horizontalLayout_2.addWidget(self.categoria_comboBox)
-
-        self.direita_filtro_horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_2.addItem(self.direita_filtro_horizontalSpacer)
-
-
-        self.gridLayout_2.addLayout(self.horizontalLayout_2, 7, 0, 1, 1)
-
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.frame_menu = QFrame(self.frame)
@@ -225,10 +116,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addLayout(self.horizontalLayout, 5, 0, 1, 1)
 
-        self.separa_menu_filtro_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Maximum)
-
-        self.gridLayout_2.addItem(self.separa_menu_filtro_verticalSpacer, 6, 0, 1, 1)
-
         self.texto_introducao_label = QLabel(self.frame)
         self.texto_introducao_label.setObjectName(u"texto_introducao_label")
         self.texto_introducao_label.setStyleSheet(u"font-size: 1.875rem;\n"
@@ -237,6 +124,26 @@ class Ui_MainWindow(object):
 "line-height: 2.25rem;")
 
         self.gridLayout_2.addWidget(self.texto_introducao_label, 3, 0, 1, 1)
+
+        self.filtro_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_2.addItem(self.filtro_verticalSpacer, 7, 0, 1, 1)
+
+        self.imagem_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_2.addItem(self.imagem_verticalSpacer, 0, 0, 1, 1)
+
+        self.imagem_label = QLabel(self.frame)
+        self.imagem_label.setObjectName(u"imagem_label")
+        self.imagem_label.setPixmap(QPixmap(u"views/assets/icons8-controle-64.png"))
+        self.imagem_label.setScaledContents(False)
+        self.imagem_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.imagem_label, 2, 0, 1, 1)
+
+        self.separa_menu_filtro_verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Maximum)
+
+        self.gridLayout_2.addItem(self.separa_menu_filtro_verticalSpacer, 6, 0, 1, 1)
 
 
         self.verticalLayout.addWidget(self.frame)
@@ -274,30 +181,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.imagem_label.setText("")
-        self.genero_comboBox.setItemText(0, "")
-        self.genero_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"TODOS", None))
-        self.genero_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"A\u00e7\u00e3o", None))
-        self.genero_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Aventura", None))
-        self.genero_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"RPG", None))
-        self.genero_comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Roguelike", None))
-        self.genero_comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Simula\u00e7\u00e3o", None))
-        self.genero_comboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Corrida", None))
-        self.genero_comboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Esportes", None))
-        self.genero_comboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"FPS", None))
-        self.genero_comboBox.setItemText(10, QCoreApplication.translate("MainWindow", u"Hack and Lash", None))
-
-        self.categoria_comboBox.setItemText(0, "")
-        self.categoria_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"TODOS", None))
-        self.categoria_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cooperativo", None))
-        self.categoria_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Cooperativo On-line", None))
-        self.categoria_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"MMO", None))
-        self.categoria_comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Multijogador", None))
-        self.categoria_comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Multijogardo Local e em Grupo", None))
-        self.categoria_comboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Rede Local (LAN)", None))
-        self.categoria_comboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Um Jogador", None))
-
         self.enviar_pushButton.setText(QCoreApplication.translate("MainWindow", u"Enviar", None))
         self.texto_introducao_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:700;\">Digite o nome de um jogo ou defina o g\u00eanero e o modo de jogo.</span></p></body></html>", None))
+        self.imagem_label.setText("")
     # retranslateUi
 

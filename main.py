@@ -91,7 +91,7 @@ class DescricaoIntem(QWidget, Ui_Form):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon('view/assets/icons8-controle-64.png'))
+    app.setWindowIcon(QIcon('views/assets/icons8-controle-64.png'))
     window = MainWindow()
     window.show()
     app.exec()
