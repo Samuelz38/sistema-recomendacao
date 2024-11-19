@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1a1a1a;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="Line" name="inicial_line">
+        <property name="styleSheet">
+         <string notr="true">line {
+    height: 3px; /* Espessura da linha */
+    width: 100%; /* Largura total */
+    background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f); /* Gradiente suave */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Brilho suave */
+    margin: 20px 0; /* Espaçamento vertical */
+}
+
+/* Adicionando animação ao gradiente */
+line.animated {
+    background-size: 200% 200%; /* Permite o deslocamento */
+    animation: gradientMove 3s infinite; /* Animação contínua */
+}
+
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2d2d2d;
+border-radius: 10px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="5" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QFrame" name="frame_menu">
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="campo_pesquisa_lineEdit">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+                padding: 8px;
+                background-color: #3d3d3d;
+                border: 1px solid #4d4d4d;
+                border-radius: 5px;
+                color: #ffffff;
+            }
+            QLineEdit:focus {
+                border: 1px solid #10a37f;
+            }</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <spacer name="esquerda_horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Policy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="enviar_pushButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+                background-color: #10a37f;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+ QPushButton:hover {
+                background-color: #0d816a;
+		}</string>
+             </property>
+             <property name="text">
+              <string>Enviar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="direita_horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Policy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="texto_introducao_label">
+           <property name="styleSheet">
+            <string notr="true">font-size: 1.875rem;
+color: rgb(206, 206, 206);
+font-weight: 600;
+line-height: 2.25rem;</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Digite o nome de um jogo ou defina o gênero e o modo de jogo.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <spacer name="filtro_verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <spacer name="imagem_verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="imagem_label">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../../Projetos/assets/icons8-controle-64.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <spacer name="separa_menu_filtro_verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Maximum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="final_line">
+        <property name="styleSheet">
+         <string notr="true">custom-line {
+    height: 3px; /* Espessura da linha */
+    width: 100%; /* Largura total */
+    background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f); /* Gradiente suave */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Brilho suave */
+    margin: 20px 0; /* Espaçamento vertical */
+}
+
+/* Adicionando animação ao gradiente */
+.custom-line.animated {
+    background-size: 200% 200%; /* Permite o deslocamento */
+    animation: gradientMove 3s infinite; /* Animação contínua */
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
