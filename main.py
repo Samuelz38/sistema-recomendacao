@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
-from PySide6.QtGui import QIcon, QPixmap
+from PySide6.QtGui import QIcon, QPixmap, QKeyEvent
 from PySide6.QtCore import Qt
 
 from views.novo_descricao import Ui_Form
@@ -37,6 +37,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if MainController.GAME_LIST:
             
             self.pesquisa_pagina.lista_listWidget.addItems(list(map(lambda x: x.name, MainController.GAME_LIST)))
+
+    def keyPressEvent(self, event: QKeyEvent):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.enviar_pushButton.click()
+        else:
+            super(MainWindow, self).keyPressEvent(event)
 
 class PaginaPesquisa(QWidget, Ui_PesquisaPagina):
     
